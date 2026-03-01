@@ -137,13 +137,14 @@ box-shadow: 0 2px 20px rgba(0,0,0,0.08);
 .process-flow { display:grid; grid-template-columns:repeat(5,1fr); gap:0; position:relative; margin-top:60px; }
 .process-flow::before { content:’’; position:absolute; top:40px; left:10%; right:10%; height:2px; background:linear-gradient(90deg,var(–accent),var(–accent-light),var(–accent)); }
 .process-step { text-align:center; padding:0 16px; }
-.process-circle { width:80px; height:80px; border:2px solid var(–accent); border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 24px; background:var(–white); position:relative; z-index:1; font-size:0.7rem; font-family:‘Montserrat’,sans-serif; font-weight:700; color:var(–accent); letter-spacing:0.05em; }
+.process-circle { width:80px; height:80px; border:2px solid var(–accent); border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 24px; background:var(–white); position:relative; z-index:1; }
 .process-step-num { position:absolute; top:-8px; right:-8px; width:24px; height:24px; background:var(–accent); color:#fff; border-radius:50%; font-family:‘Montserrat’,sans-serif; font-weight:700; font-size:0.65rem; display:flex; align-items:center; justify-content:center; }
 .process-title { font-size:0.88rem; font-weight:700; margin-bottom:8px; }
 .process-desc { font-size:0.75rem; color:var(–mid); line-height:1.8; }
 
 /* AREA */
 .area-section { background:var(–accent-bg); border-top:3px solid var(–accent); }
+.area-section .section-header { margin-bottom:32px; }
 .area-grid { display:grid; grid-template-columns:1fr 1fr; gap:40px; margin-top:40px; }
 .area-block { background:var(–white); border:1px solid var(–border); padding:32px; }
 .area-pref { font-family:‘Montserrat’,sans-serif; font-weight:900; font-size:0.72rem; letter-spacing:0.2em; color:var(–accent); margin-bottom:16px; display:flex; align-items:center; gap:8px; }
@@ -239,12 +240,16 @@ nav { padding:0 16px; height:60px; }
 .price-table-head, .price-row { grid-template-columns:1.5fr 1fr; }
 .price-table-head div:nth-child(3), .price-table-head div:nth-child(4),
 .price-row div:nth-child(3), .price-row div:nth-child(4) { display:none; }
-.process-flow { grid-template-columns:1fr; gap:28px; }
+.process-flow { grid-template-columns:1fr; gap:20px; }
 .process-flow::before { display:none; }
-.process-step { display:flex; align-items:flex-start; gap:20px; text-align:left; padding:0; }
-.process-circle { width:56px; height:56px; flex-shrink:0; margin:0; }
+.process-step { display:flex; align-items:center; gap:16px; text-align:left; padding:0; }
+.process-circle { width:48px; height:48px; flex-shrink:0; margin:0; font-size:0.55rem; overflow:hidden; }
+.process-step-num { top:-6px; right:-6px; width:20px; height:20px; font-size:0.6rem; }
+.process-title { font-size:0.9rem; margin-bottom:2px; }
+.process-desc { font-size:0.75rem; }
 .area-grid { grid-template-columns:1fr; gap:16px; }
 .voice-card { padding:28px 24px; }
+.process-section.section, .area-section.section { padding:48px 20px; }
 .faq-q { font-size:0.86rem; padding:20px 0; }
 .faq-a { padding:0 0 20px 40px; font-size:0.82rem; }
 .cta-section { padding:56px 20px; }
@@ -257,7 +262,7 @@ footer { padding:28px 20px; flex-direction:column; text-align:center; }
 .ba-label { font-size:0.62rem; padding:5px 10px; top:10px; left:10px; }
 .mobile-sticky-cta { display:flex; position:fixed; bottom:0; left:0; right:0; z-index:200; box-shadow:0 -4px 20px rgba(0,0,0,0.2); }
 .mobile-sticky-cta a { flex:1; display:flex; align-items:center; justify-content:center; gap:8px; padding:16px 12px; font-size:0.82rem; font-weight:700; text-decoration:none; letter-spacing:0.04em; font-family:‘Noto Sans JP’,sans-serif; }
-.sticky-tel { background:var(–steel); color:#fff; }
+.sticky-tel { background:var(–steel); color:#fff; flex:1; }
 .sticky-line { background:#06C755; color:#fff; }
 body { padding-bottom:56px; }
 }
@@ -435,11 +440,11 @@ body { padding-bottom:56px; }
       <h2 class="section-title">施工までの<em>流れ</em></h2>
     </div>
     <div class="process-flow fade-up">
-      <div class="process-step"><div class="process-circle"><div class="process-step-num">1</div>LINE</div><div class="process-title">お問い合わせ</div><div class="process-desc">LINEまたは電話で。24時間受付</div></div>
-      <div class="process-step"><div class="process-circle"><div class="process-step-num">2</div>visit</div><div class="process-title">無料現地調査</div><div class="process-desc">最短翌日。状態を詳しく確認</div></div>
-      <div class="process-step"><div class="process-circle"><div class="process-step-num">3</div>quote</div><div class="process-title">お見積もり提出</div><div class="process-desc">調査後48時間以内にご提出</div></div>
-      <div class="process-step"><div class="process-circle"><div class="process-step-num">4</div>work</div><div class="process-title">施工</div><div class="process-desc">ご都合に合わせて日程調整</div></div>
-      <div class="process-step"><div class="process-circle"><div class="process-step-num">5</div>done</div><div class="process-title">完了・保証開始</div><div class="process-desc">1年保証。アフターも安心</div></div>
+      <div class="process-step"><div class="process-circle"><div class="process-step-num">1</div></div><div class="process-title">お問い合わせ</div><div class="process-desc">LINEまたは電話で。24時間受付</div></div>
+      <div class="process-step"><div class="process-circle"><div class="process-step-num">2</div></div><div class="process-title">無料現地調査</div><div class="process-desc">最短翌日。状態を詳しく確認</div></div>
+      <div class="process-step"><div class="process-circle"><div class="process-step-num">3</div></div><div class="process-title">お見積もり提出</div><div class="process-desc">調査後48時間以内にご提出</div></div>
+      <div class="process-step"><div class="process-circle"><div class="process-step-num">4</div></div><div class="process-title">施工</div><div class="process-desc">ご都合に合わせて日程調整</div></div>
+      <div class="process-step"><div class="process-circle"><div class="process-step-num">5</div></div><div class="process-title">完了・保証開始</div><div class="process-desc">1年保証。アフターも安心</div></div>
     </div>
   </div>
 </section>
