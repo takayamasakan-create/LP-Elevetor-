@@ -22,7 +22,7 @@ body { background: var(--bg); color: var(--black); font-family: 'Noto Sans JP', 
 nav {
 background: var(–white); border-bottom: 2px solid var(–accent);
 padding: 0 48px; display: flex; justify-content: space-between;
-align-items: center; height: 70px; position: sticky; top: 0; z-index: 100;
+align-items: center; height: 70px; position: sticky; top: 0; z-index: 1000;
 box-shadow: 0 2px 20px rgba(0,0,0,0.08);
 }
 .logo-wrap { display: flex; flex-direction: column; line-height: 1; }
@@ -107,18 +107,18 @@ box-shadow: 0 2px 20px rgba(0,0,0,0.08);
 .solution-text em { color:var(–accent); font-style:normal; }
 
 /* FEATURES */
-.features-section { background:var(–steel); }
-.features-section .section-en { color:var(–accent-light); }
-.features-section .section-en::before { background:var(–accent-light); }
-.features-section .section-title { color:#fff; }
-.features-section .section-title em { color:var(–accent-light); }
+.features-section { background:#2c3e50 !important; }
+.features-section .section-en { color:#d4a520 !important; }
+.features-section .section-en::before { background:#d4a520 !important; }
+.features-section .section-title { color:#ffffff !important; }
+.features-section .section-title em { color:#d4a520 !important; }
 .features-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:2px; }
-.feature-card { background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); padding:48px 40px; display:flex; gap:28px; transition:background 0.3s; }
+.feature-card { background:rgba(255,255,255,0.04) !important; border:1px solid rgba(255,255,255,0.08); padding:48px 40px; display:flex; gap:28px; transition:background 0.3s; }
 .feature-card:hover { background:rgba(184,134,11,0.08); border-color:rgba(184,134,11,0.3); }
 .feature-num { font-family:‘Montserrat’,sans-serif; font-weight:900; font-size:3.5rem; color:rgba(184,134,11,0.2); line-height:1; flex-shrink:0; width:64px; }
-.feature-title { font-size:1rem; font-weight:700; color:#fff; margin-bottom:12px; }
+.feature-title { font-size:1rem; font-weight:700; color:#ffffff !important; margin-bottom:12px; }
 .feature-title span { color:var(–accent-light); }
-.feature-desc { font-size:0.82rem; color:rgba(255,255,255,0.55); line-height:1.9; }
+.feature-desc { font-size:0.82rem; color:rgba(255,255,255,0.6) !important; line-height:1.9; }
 
 /* PRICE */
 .price-section { background:var(–bg); }
